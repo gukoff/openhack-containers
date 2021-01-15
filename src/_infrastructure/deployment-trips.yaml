@@ -26,17 +26,9 @@ spec:
           value: "http://0.0.0.0"
         - name: ASPNETCORE_ENVIRONMENT
           value: "Development"
-        volumeMounts:
-        - name: secrets
-          mountPath: /secrets2
-          readOnly: true
-      volumes:
-        - name: secrets
-          csi:
-            driver: secrets-store.csi.k8s.io
-            readOnly: true
-            volumeAttributes:
-              secretProviderClass: azure-keyvault
+        envFrom:
+        - secretRef:
+            name: sql
 ---
 apiVersion: v1
 kind: Service
