@@ -8,7 +8,7 @@ spec:
   parameters:
     usePodIdentity: "false"                   # [REQUIRED] Set to "true" if using managed identities
     useVMManagedIdentity: "false"             # [OPTIONAL] if not provided, will default to "false"
-    userAssignedIdentityID: "4284597e-d465-4ba5-adb1-5775610fb47a"       
+    userAssignedIdentityID: ""       
     # [REQUIRED]  If you're using a user-assigned identity as the VM's managed identity, specify the identity's client id. 
     # If the value is empty, it defaults to use the system-assigned identity on the VM
                                                          
